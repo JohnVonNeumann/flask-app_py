@@ -9,7 +9,7 @@ def create_app():
 
     @app.route('/')
     def index():
-        return "Hello, World!"
+        return "Hello, World?"
 
     return app
 

@@ -6,11 +6,11 @@ services:
     command: >
       gunicorn -b 0.0.0.0:8000
         --access-logfile -
-        --reload
+        --reload #remove in production
         "application.app:create_app()"
     environment:
-      PYTHONUNBUFFERED: 'true'
+      PYTHONUNBUFFERED: 'true' # displays stdout
     volumes:
-      - '.:/application'
+      - '.:/application' # take . and mount in app folder
     ports:
-      - '8000:8000'
+      - '8000:8000' #host:remote
